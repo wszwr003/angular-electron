@@ -16,11 +16,22 @@ export class AppComponent {
     console.log('AppConfig', AppConfig);
 
     if (electronService.isElectron()) {
+      //this.listPorts();
       console.log('Mode electron');
       console.log('Electron ipcRenderer', electronService.ipcRenderer);
       console.log('NodeJS childProcess', electronService.childProcess);
     } else {
       console.log('Mode web');
     }
+  }
+
+  private listPorts = () => {
+    this.electronService.serialPort.list(function (err, ports) {
+      ports.forEach(function(port) {
+      console.log(port.comName);
+      console.log(port.pnpId);
+      console.log(port.manufacturer);
+       });
+     }); 
   }
 }

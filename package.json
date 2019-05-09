@@ -80,5 +80,9 @@
     "wait-on": "3.2.0",
     "webdriver-manager": "12.1.0",
     "zone.js": "0.8.29"
+  },
+  "dependencies": {
+    "@types/serialport": "^7.0.3",
+    "serialport": "^7.1.5"
   }
 }
