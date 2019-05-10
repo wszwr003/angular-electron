@@ -52,8 +52,10 @@
     "@angular/router": "7.2.7",
     "@ngx-translate/core": "11.0.1",
     "@ngx-translate/http-loader": "4.0.0",
+    "@types/bootstrap": "^4.3.0",
     "@types/jasmine": "2.8.7",
     "@types/jasminewd2": "2.0.3",
+    "@types/jquery": "^3.3.29",
     "@types/mocha": "^5.2.6",
     "@types/node": "8.9.4",
     "chai": "^4.2.0",
@@ -83,6 +85,9 @@
   },
   "dependencies": {
     "@types/serialport": "^7.0.3",
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1",
+    "bootstrap": "^4.3.1",
     "serialport": "^7.1.5"
   }
 }
