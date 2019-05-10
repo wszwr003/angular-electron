@@ -3,7 +3,6 @@ import { ElectronService } from './electron.service';
 import { Observable, of } from 'rxjs';
 import { SerialHardware } from "../entity/serialhardware";
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -58,6 +57,7 @@ export class SerialportService {
     });
 
     this.port.on('data', data => {
+      data = this.electronService.iconv.decode(data, 'GBK');
       this.receiveData = data;
       console.log('[ReceiveDATA]: ' + data);
     });
@@ -88,8 +88,7 @@ export class SerialportService {
 
   sendData(inputData) {
     inputData = inputData.toString(); // force conversion
-    let buf = new Buffer(inputData + '\r', 'utf8'); // append CR
-
+    let buf = this.electronService.iconv.encode(inputData, 'GBK');   //FIXME:1.Buffer方法已经弃用✔ 2.发送到串口助手中文乱码✔ 3.HEX尚未实现
     this.port.write(buf, err => {
       if (err) {
         return console.log(`[LOG] Error on <${inputData}> command: `, err.message);

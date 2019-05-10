@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SerialportService } from "../../providers/serialport.service";
 import { SerialHardware } from "../../entity/serialhardware";
-
+import { SqliteService } from '../../providers/sqlite.service';
 @Component({
   selector: 'app-serialport',
   templateUrl: './serialport.component.html',
@@ -13,7 +13,7 @@ export class SerialportComponent implements OnInit {
   public inputData: string = '';
 
   avalibaleHardwares:SerialHardware[];
-  constructor(private serialportService: SerialportService) { 
+  constructor(private sqliteservice: SqliteService,private serialportService: SerialportService) { 
     this.portstate=false;
   }
 
@@ -58,4 +58,7 @@ export class SerialportComponent implements OnInit {
     this.serialportService.sendData(inputData);
     }
 
+  saveData(inputData){
+    this.sqliteservice.dbset();
+  }
 }
