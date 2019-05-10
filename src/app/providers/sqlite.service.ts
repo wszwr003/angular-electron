@@ -12,7 +12,7 @@ export class SqliteService {
   constructor(public electronService: ElectronService) {
   }
   
-  dbset(){
+  dbtest(){
     var temp = this.db;
     temp.serialize(()=> {
       temp.run("CREATE TABLE lorem (info TEXT)");

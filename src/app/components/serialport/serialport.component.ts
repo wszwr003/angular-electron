@@ -59,6 +59,6 @@ export class SerialportComponent implements OnInit {
     }
 
   saveData(inputData){
-    this.sqliteservice.dbset();
+    this.sqliteservice.dbtest();
   }
 }
