@@ -8,6 +8,7 @@ import * as childProcess from 'child_process';
 import * as fs from 'fs';
 import * as iconv  from 'iconv-lite';
 import * as sqlite  from 'sqlite3';
+import * as mysql  from 'mysql';
 
 @Injectable()
 export class ElectronService {
@@ -20,6 +21,7 @@ export class ElectronService {
   fs: typeof fs;
   iconv: typeof iconv;
   sqlite: typeof sqlite;
+  mysql: typeof mysql;
 
   constructor() {
     // Conditional imports
@@ -33,6 +35,7 @@ export class ElectronService {
       this.fs = window.require('fs');
       this.iconv = window.require('iconv-lite'); //fix windows下串口相互无法发送中文
       this.sqlite = (window.require('sqlite3')).verbose();
+      this.mysql = (window.require('mysql'));
     }
   }
 

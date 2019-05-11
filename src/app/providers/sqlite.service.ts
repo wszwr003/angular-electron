@@ -13,15 +13,15 @@ export class SqliteService {
   }
   
   dbtest(){
-    var temp = this.db;
-    temp.serialize(()=> {
-      temp.run("CREATE TABLE lorem (info TEXT)");
+    var db = this.db;
+    db.serialize(()=> {
+      db.run("CREATE TABLE lorem (info TEXT)");
       var stmt = this.db.prepare("INSERT INTO lorem VALUES (?)");
       for (var i = 0; i < 10; i++) {
           stmt.run("Ipsum " + i);
       }
       stmt.finalize();
-      temp.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
+      db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {
           console.log(row.id + ": " + row.info);
       });
     });

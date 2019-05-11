@@ -22,6 +22,7 @@ export class SerialportService {
   scanHardwares(): Observable<SerialHardware[]> {
     let index = 1
     let portDetails: any
+    var iconv = this.electronService.iconv;
     this.serialhardwareList = []; // clear before every scan
     this.electronService.serialPort.list().then(ports => {
       console.log('[LOG] List of ports: ', ports)
@@ -29,7 +30,7 @@ export class SerialportService {
         portDetails = {
           id: index,
           comName: port.comName,
-          manufacturer: port.manufacturer,
+          manufacturer: iconv.decode(Buffer.from(port.manufacturer, 'utf8'), 'GBK'),//FIXME:web&console display err!  MAY BE USE ICONV NOT ICONV-LITE
           vendorId: port.vendorId,
           productId: port.productId
         };

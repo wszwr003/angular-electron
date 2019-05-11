@@ -13,7 +13,7 @@ export class SerialportComponent implements OnInit {
   public inputData: string = '';
 
   avalibaleHardwares:SerialHardware[];
-  constructor(private sqliteservice: SqliteService,private serialportService: SerialportService) { 
+  constructor(private sqliteservice: SqliteService,public serialportService: SerialportService) { 
     this.portstate=false;
   }
 
