@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SerialportService } from "../../providers/serialport.service";
 import { SerialHardware } from "../../entity/serialhardware";
 import { SqliteService } from '../../providers/sqlite.service';
+import { fromEvent } from 'rxjs';
+import { throttleTime, map, scan } from 'rxjs/operators';
 @Component({
   selector: 'app-serialport',
   templateUrl: './serialport.component.html',
@@ -11,14 +13,12 @@ export class SerialportComponent implements OnInit {
   public selectedPortId: string;
   public portstate: boolean ;
   public inputData: string = '';
-
   avalibaleHardwares:SerialHardware[];
   constructor(private sqliteservice: SqliteService,public serialportService: SerialportService) { 
     this.portstate=false;
   }
 
   ngOnInit() {
-
   }
 
   scanHardwares(): void {
