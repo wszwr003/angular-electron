@@ -62,3 +62,6 @@ export class SerialportComponent implements OnInit {
     this.sqliteservice.dbtest();
   }
 }
+
+// const clicks = fromEvent(document, 'click');
+// clicks.subscribe(x => console.log("rxjs-click-event"+x));

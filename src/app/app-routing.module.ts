@@ -2,15 +2,20 @@ import { HomeComponent } from './components/home/home.component';
 import { SerialportComponent } from './components/serialport/serialport.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MainComponent as MicroDropsComponent } from './components/micro-drops/main/main.component';
 
 const routes: Routes = [
     // {
     //     path: '',
     //     component: HomeComponent
     // },
+    // {
+    //     path: '',
+    //     component: SerialportComponent
+    // },
     {
         path: '',
-        component: SerialportComponent
+        component: MicroDropsComponent
     }
 ];
 
