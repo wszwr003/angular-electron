@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { DataModel } from '../../../entity/chart.model';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-drop-main',
+  templateUrl: './drop-main.component.html',
+  styleUrls: ['./drop-main.component.scss']
 })
 export class MainComponent implements OnInit {
   data: Observable<DataModel>;

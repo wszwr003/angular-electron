@@ -1,0 +1,237 @@
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">微液滴恒化培养仪</a>
+  <!-- <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"> -->
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">登录</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              <span data-feather="home"></span>
+              微液滴控制 <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="users"></span>
+              温度控制
+            </a>
+          </li>
+        </ul>
+
+        <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+          <span>相关设置</span>
+          <a class="d-flex align-items-center text-muted" href="#">
+            <span data-feather="plus-circle"></span>
+          </a>
+        </h4>
+        <ul class="nav flex-column mb-2">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              历史数据
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file-text"></span>
+              设置
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="col-md-10 ml-sm-auto col-lg-10 pt-3 px-4">
+      <!-- <div class="container-fluid">
+            <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+            <div class="dropdown" ngbDropdown>
+              <button class="btn btn-default btn-outline-dark" type="button" ngbDropdownToggle>
+                下拉框
+              </button>
+              <ul class="dropdown-menu" ngbDropdownMenu>
+                <li class="dropdown-item">Icon Button</li>
+                <li class="dropdown-item">Hero Button</li>
+                <li class="dropdown-item">Default</li>
+              </ul>
+            </div> 
+          </div> -->
+      <div class="container-fluid" m-1>
+        <div class="card m-1">
+          <div class="card-header text-center">
+            实时数据
+          </div>
+          <div class="card-body">
+            <app-chart></app-chart>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card m-1">
+              <div class="card-header">
+                系统初始化
+              </div>
+              <div class="card-body">
+                <input type="text">
+
+                </input>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card m-1">
+              <div class="card-header">
+                电磁阀控制
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md col-lg-4">
+            <div class="card m-1">
+              <div class="card-header">
+                单泵控制
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="card m-1">
+              <div class="card-header">
+                多泵控制
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card m-1">
+              <div class="card-header">
+                清洗管路
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card m-1">
+              <div class="card-header">
+                液滴生成
+              </div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's
+                  content.</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card m-1">
+              <div class="card-header">
+                循环培养融合分割
+              </div>
+              <div class="card-body">
+                <p class="card-text">111</p>
+                <button type="button" class="btn btn-default btn-outline-dark">黑白按键</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>数据表</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>sit</td>
+            </tr>
+            <tr>
+              <td>1,002</td>
+              <td>amet</td>
+              <td>consectetur</td>
+              <td>adipiscing</td>
+              <td>elit</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>Integer</td>
+              <td>nec</td>
+              <td>odio</td>
+              <td>Praesent</td>
+            </tr>
+            <tr>
+              <td>1,003</td>
+              <td>libero</td>
+              <td>Sed</td>
+              <td>cursus</td>
+              <td>ante</td>
+            </tr>
+            <tr>
+              <td>1,004</td>
+              <td>dapibus</td>
+              <td>diam</td>
+              <td>Sed</td>
+              <td>nisi</td>
+            </tr>
+            <tr>
+              <td>1,005</td>
+              <td>Nulla</td>
+              <td>quis</td>
+              <td>sem</td>
+              <td>at</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

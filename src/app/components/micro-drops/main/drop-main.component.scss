@@ -7,7 +7,10 @@ body {
     height: 16px;
     vertical-align: text-bottom;
   }
-  
+  button {
+    position: absolute;
+    bottom: 1rem;right: 1rem;
+  }
   /*
    * Sidebar
    */

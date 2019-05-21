@@ -1,4 +1,4 @@
 export interface DataModel {
-    letter: string;
-    frequency: number;
+    x_label: string;
+    y_num: number;
 }
